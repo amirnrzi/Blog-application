@@ -10,7 +10,7 @@ class Post(models.Model):
         REJECTED = 'RJ', 'Rejected'
 
     # relation
-    auther = models.ForeignKey(User, on_delete=models.CASCADE , related_name='user_posts')
+    author = models.ForeignKey(User, on_delete=models.CASCADE , related_name='user_posts')
     #data fields
     title = models.CharField(max_length=250)
     description = models.TextField()
