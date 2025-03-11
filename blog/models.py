@@ -13,7 +13,7 @@ class Post(models.Model):
     auther = models.ForeignKey(User, on_delete=models.CASCADE , related_name='user_posts')
     #data fields
     title = models.CharField(max_length=250)
-    discription = models.TextField()
+    description = models.TextField()
     slug = models.SlugField(max_length=250, unique=True)
     #date
     publish = models.DateTimeField(default=timezone.now)
